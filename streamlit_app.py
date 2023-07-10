@@ -44,7 +44,7 @@ streamlit.text("Fruit list contains:")
 streamlit.dataframe(my_data_row)
 add_fruit= streamlit.text_input('Which fruit would you like to add to the list?')
 if add_fruit not in my_data_row:
-  my_cur.execute("insert into fruit_load_list values(add_fruit))
+  my_cur.execute("insert into fruit_load_list values(add_fruit)")
   my_cur.execute("SELECT * FROM fruit_load_list")
   my_data_row = my_cur.fetchall()
   #streamlit.text("Hello from Snowflake:")
